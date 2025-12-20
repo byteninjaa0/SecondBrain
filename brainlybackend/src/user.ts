@@ -14,6 +14,6 @@ export function usermiddleware(req: Request, res: Response, next: NextFunction) 
     req.userId = decoded.id;
     next();
   } catch (err) {
-    return res.status(403).json({ message: "Invalid token" });
+    return res.status(401).json({ message: "Invalid token" });
   }
 }

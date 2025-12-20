@@ -5,8 +5,11 @@ import { Input } from "./Input";
 import axios from "axios"
 import { BACKEND_URL } from "./Config";
 import { data, useNavigate } from "react-router-dom";
-
+import jwtdecode, { jwtDecode } from "jwt-decode"
 export function Signin(){
+    function logout(){
+
+    }
     const navigate=useNavigate();
     const usernameref=useRef<HTMLInputElement>(null);
     const passwordref=useRef<HTMLInputElement>(null);
@@ -18,6 +21,8 @@ export function Signin(){
                 password 
         });
         const jwt = response.data.token;
+        console.log(jwtDecode(jwt).exp);
+        console.log(jwt.ex)
         localStorage.setItem("token",jwt);
         localStorage.setItem("username",username);
         if(!jwt){

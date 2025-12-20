@@ -61,15 +61,6 @@ app.get("/api/v1/content", usermiddleware,async (req, res) => {
   res.json({content});
 })
 
-app.delete("/api/v1/content",usermiddleware,async (req,res)=>{
-  const contentId=req.body.contentId;
-  await Content.deleteOne({
-   
-    //@ts-ignore
-    _id:contentId
-  })
-  res.json({message:"content deleted"})
 
-})
 
 app.listen(3000, () => console.log("Server running on port 3000"))
