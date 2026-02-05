@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import { Card } from "./Card";
 import { Sidebar, FilterType } from "./Sidebar";
 import { Button } from "./Button";
 import { CreateContentModal } from "./CreateContentModal";
-import { useState } from "react";
 import { PlusIcon } from "./icon/PlusIcon";
 import { ShareIcon } from "./icon/ShareIcon";
 import { UseContent } from "./useContent";
@@ -27,22 +27,24 @@ export function Dashboard() {
   });
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100 lg:pl-72">
       <Sidebar
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
       />
 
-      <div className="p-2 ml-72 min-h-screen bg-gray-100">
+      <div className="p-4">
         <CreateContentModal
           onClose={() => setModalOpen(false)}
           open={modalOpen}
         />
 
-        <div className="flex justify-between items-center mb-4">
-          <div>hello, {localStorage.getItem("username")}</div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+          <div className="text-lg font-medium">
+            hello, {localStorage.getItem("username")}
+          </div>
 
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2 justify-start sm:justify-end">
             <Button
               onclick={() => setModalOpen(true)}
               type="primary"
@@ -60,9 +62,15 @@ export function Dashboard() {
           </div>
         </div>
 
-        <div className="flex gap-3 flex-wrap">
-          {filteredContent.map(({ type, link, _id,title }) => (
-            <Card id={_id} title={title} link={link} type={type} />
+        <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
+          {filteredContent.map(({ type, link, _id, title }) => (
+            <Card
+              key={_id}
+              id={_id}
+              title={title}
+              link={link}
+              type={type}
+            />
           ))}
         </div>
       </div>

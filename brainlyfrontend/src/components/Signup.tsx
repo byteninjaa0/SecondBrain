@@ -74,8 +74,8 @@ export function Signup() {
       </div>
 
       {/* UI */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="w-[380px] backdrop-blur-md bg-white/60 rounded-2xl p-6">
+      <div className="relative z-10 flex items-center justify-center h-full px-4">
+        <div className="w-full max-w-sm backdrop-blur-md bg-white/60 rounded-2xl p-6">
           <h2 className="text-2xl font-semibold text-center mb-2">
             Create your account
           </h2>
