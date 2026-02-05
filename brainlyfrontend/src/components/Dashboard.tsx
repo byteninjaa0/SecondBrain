@@ -61,8 +61,8 @@ export function Dashboard() {
         </div>
 
         <div className="flex gap-3 flex-wrap">
-          {filteredContent.map(({ type, link, _id }) => (
-            <Card id={_id} title={type} link={link} type={type} />
+          {filteredContent.map(({ type, link, _id,title }) => (
+            <Card id={_id} title={title} link={link} type={type} />
           ))}
         </div>
       </div>

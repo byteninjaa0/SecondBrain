@@ -11,6 +11,7 @@ const ContentSchema= new Schema({
     user:{type:Schema.Types.ObjectId,ref:'user'},
     type:String,
     link:String,
+    title:String,
     tag:{type:Schema.Types.ObjectId,ref:'tag'}
 })
 const TagSchema= new Schema({

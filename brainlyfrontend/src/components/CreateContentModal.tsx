@@ -18,7 +18,7 @@ export function CreateContentModal({ open, onClose }: any) {
     await axios.post(
       `${BACKEND_URL}api/v1/content`,
       {
-        title,
+        title:title,
         link: detected.link,
         type: detected.type,
       },
