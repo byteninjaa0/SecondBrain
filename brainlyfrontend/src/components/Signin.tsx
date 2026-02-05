@@ -89,10 +89,10 @@ export function Signin() {
           </h2>
 
           <div className="flex flex-col justify-center items-center text-gray-600 mb-4">
-            <p className="text-sm text-color-gray">
-              Save links and access them anywhere anytime you
+            <p className="text-sm text-color-gray-500">
+              Save links and access them anywhere anytime.
             </p>
-            <p className="text-sm text-color-gray">want.</p>
+            <p className="text-sm text-color-gray"></p>
           </div>
 
           <div className="flex flex-col justify-center gap-4">
