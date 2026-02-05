@@ -1,7 +1,7 @@
 import { Card } from "./Card";
 import { Sidebar, FilterType } from "./Sidebar";
 import { Button } from "./Button";
-import { CreateContentModal } from "./createContentModal";
+import { CreateContentModal } from "./CreateContentModal";
 import { useState } from "react";
 import { PlusIcon } from "./icon/PlusIcon";
 import { ShareIcon } from "./icon/ShareIcon";

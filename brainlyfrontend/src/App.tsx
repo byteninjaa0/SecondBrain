@@ -1,12 +1,5 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import { Button } from './components/Button'
-import { PlusIcon } from './components/icon/PlusIcon'
-import { ShareIcon } from './components/icon/ShareIcon'
-import { Card } from './components/card'
-import { CreateContentModal } from './components/createContentModal'
-import { Sidebar } from './components/Sidebar'
 import { Signup } from './components/Signup'
 import {BrowserRouter, Route, Router, Routes} from 'react-router-dom'
 import { Dashboard } from './components/Dashboard'
