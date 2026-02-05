@@ -29,7 +29,7 @@ const user = await User.findOne({ username });
     if(!user){
       return res.json({message:"connot find the user"});
     }
-    const verify= await bcrypt.compare(password,user.password);
+    const verify= await bcrypt.compare(password,user.password!);
     if(!verify){
       return res.json({message:"wrong passsword"});
     }
